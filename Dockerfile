@@ -7,4 +7,4 @@ RUN cd /tmp && tar xvf bitcoin*.tar.gz && cp -r /tmp/bitcoin*/bin/* /usr/bin && 
 
 EXPOSE 8332
 WORKDIR /tmp
-ENTRYPOINT bitcoind -server -testnet -datadir=/data -printtoconsole -rpcuser=user -rpcpassword=pass -rpcport=8332 -rpcbind=0.0.0.0 -rpcallowip=0.0.0.0/0
+ENTRYPOINT bitcoind -server -testnet -datadir=/data -printtoconsole -rpcuser=user -rpcpassword=pass -rpcport=8332 -rpcbind=0.0.0.0 -rpcallowip=0.0.0.0/0 $EXTRA_OPTIONS
